@@ -1,0 +1,237 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+         
+    <li class="nav-item active"  routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+        <a class="nav-link" routerLink="/" >Главная</a></li>
+              
+    <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/System-Board">Материнская плата</a></li>
+    <li class="nav-item" routerLinkActive="active"><a class="nav-link" class="nav-link" routerLink="/RAM">Оперативная память</a></li>
+    <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/ibp-page" >Блок питания</a></li>
+    <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/blog" >Блоg</a></li>
+    <!--<li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/title" >title</a></li>-->
+    <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/Addon">Дополнительные комплектующие и порты</a></li>
+    <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/peripheral-network">Периферийные и сетевые устройства</a></li>
+      
+    <li class="nav-item" routerLinkActive="active" ><a class="nav-link" routerLink="/dvd">Жесткий диск и CD/DVD/BD-ROM приводы</a></li>
+    <li class="nav-item" routerLinkActive="active" ><a class="nav-link" routerLink="/Processor">Процессор</a></li>
+    <li class="nav-item" routerLinkActive="active" ><a class="nav-link" routerLink="/VideoCard">Видеокарта</a></li>
+    
+          
+          
+      </ul>
+    </div>  <div class="col-12">
+                <div class="mobile_menu d-block d-lg-none"></div>
+            </div>
+  </div>
+</nav>
+
+     
+
+
+
+<div class="content" role="main"> 
+<router-outlet> <br><br><br><br><br><br><br></router-outlet>
+   
+    
+    <!--
+    <br><br><br>
+    
+    <h1>Список пользователей</h1>
+<input type="button" value="Добавить" class="btn btn-default" (click)="addTitle()" />
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>title</td>
+            <td>text</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let title of titles">
+            <ng-template [ngTemplateOutlet]="loadTemplate(title)" 
+                        [ngTemplateOutletContext]="{ $implicit: title}">
+            </ng-template>
+        </tr>
+    </tbody>
+</table>
+<div>{{statusMessage}}</div>
+    
+    
+<ng-template #readOnlyTemplate let-title>
+    <td>{{title._id}}</td>
+    <td>{{title.title}}</td>
+    <td>{{title.text}}</td>
+    <td>
+        <input type="button" value="Изменить" class="btn btn-default" (click)="editTitle(title)" />
+    </td>
+    
+</ng-template>
+   
+<ng-template #editTemplate>
+    <td>
+        <input type="number" [(ngModel)]="editedTitle._id" readonly disabled class="form-control" />
+    </td>
+    <td>
+        <input type="text" [(ngModel)]="editedTitle.title" class="form-control" />
+    </td>
+    <td>
+        <input type="text" [(ngModel)]="editedTitle.text" class="form-control" />
+    </td>
+    <td>
+        <input type="button" value="Сохранить" (click)="saveTitle()" class="btn btn-success" />
+    </td>
+    
+</ng-template>
+</div>
+
+    
+    
+   
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+    
+    
+
+<header>
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="background-imtext: url('https://source.unsplash.com/LAaSoL0LrYs/1920x1080')">
+        <div class="carousel-caption">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image: url('https://source.unsplash.com/bF2vsubyHcQ/1920x1080')">
+        <div class="carousel-caption">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image: url('https://source.unsplash.com/szFUQoyvrxM/1920x1080')">
+        <div class="carousel-caption">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</header>
+
+    
+    
+    
+    
+    <footer class="footer">
+<div class="footer_top">
+<div class="container">
+<div class="row">
+    <div class="col-xl-3 col-md-6 col-lg-3">
+        <div class="footer_widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+            <div class="footer_logo">
+               
+            </div>
+            
+            <div class="socail_links">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="ti-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-xl-2 col-md-6 col-lg-2">
+        <div class="footer_widget wow fadeInUp" data-wow-duration="1.1s" data-wow-delay=".4s">
+            <h3 class="footer_title">
+                О нас
+            </h3>
+            <ul>
+                <li><a href="#">Обратная связь </a></li>
+                
+            </ul>
+
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6 col-lg-3">
+        <div class="footer_widget wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s">
+            <h3 class="footer_title">
+                Комплектующие
+            </h3>
+            <ul>
+                
+                <li><a href="#">             
+                Материнская плата</a></li>
+                <li><a href="#">Процессор</a></li>
+                <li><a href="#">Оперативная память</a></li>
+                <li><a href="#">Видеокарта</a></li>
+                <li><a href="#">Жесткий диск и CD/DVD/BD-ROM приводы</a></li>
+                <li><a href="#">Блок питания</a></li>
+                <li><a href="#">Дополнительные комплектующие и порты</a></li>
+                <li><a href="#">Периферийные и сетевые устройства</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-xl-4 col-md-6 col-lg-4">
+        <div class="footer_widget wow fadeInUp" data-wow-duration="1.3s" data-wow-delay=".6s">
+            <h3 class="footer_title">
+               Обратная связь
+            </h3>
+            
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<div class="copy-right_text wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".3s">
+<div class="container">
+<div class="footer_border"></div>
+<div class="row">
+    <div class="col-xl-12">
+        <p class="copy_right text-center">
+          Дата
+ &copy;<script>document.write(new Date().getFullYear());</script>Сделано <i class="fa fa-heart-o" aria-hidden="true"></i>  сделано кожевниковой
+        </p>
+    </div>
+</div>
+</div>
+</div>
+</footer>-->
